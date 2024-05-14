@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class = "nav">
+      <ul class ="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="meetingthebrief.html">Meeting the Brief</a></li>
+        <li><a href="investigationandplan.html">Investigation and Plan</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="implementation.html">Implementation</a></li>
+        <li><a href="testing.html">Testing</a></li>
+        <li><a href="evaluation.html">Evaluation</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="wordcount.html">Word Count</a></li>
+      </ul>
+    </div>
+
+    <h2><center>Design</center></h2>
+    <hr>
+    <br>
+    <b><center>Description of Design</center></b>
+    <p>My system architecture involves 4 sections. The first section of my program will contain functions that contain the code for various features of the game modes. These functions will perform tasks such as printing the main menu, checking for win, checking for draw and printing the scoreboard. The second section will contain 3 main functions, that contain the logic for each of the game modes (singleplayer() etc.).  These 3 main functions will contain the peripheral functions from the first section. The third section of the program will contain the code that makes the user modelled graphs that vary depending on user inputs. A dictionary, where the data is collected, will be converted into a CSV file (data.csv) so the data collected can be seen. Finally, the fourth section of the program will contain nested loops that will organise the CSV (collected-data.csv) into a large nested dictionary so the data can be graphed. The code for these graphs will be in this section too.</p>
+    <b><center>Meeting Project Objectives</center></b>
+    <p><u>Functioning of the Game</u></p>
+      <p><ol>
+        <li class="tab">I will ensure the functions to check game state (win etc.) return the correct value eg. check_draw() returns True when game state is draw. I will run this function after each move. This way the correct state of the game will be returned correctly each time. </li>
+        <li class="tab">I will use a function that checks which player won and append 1 to their score expressed as a variable. That way, I can ensure a player’s score correlates to that player’s number of wins.</li>
+        <li class="tab">Each time a game is played, the results of that game (total moves, winner) are appended to the CSV in simulation play.</li>
+      </ol>
+    </p>
+    <p><u>User Interface</u></p>
+    <p><ol>
+        <li class="tab">Accepted inputs will be displayed beside input prompt and the function of each input will be clear</li>
+        <li class="tab">I will validate all inputs and filter invalid ones using loops that break only when a valid input is received </li>
+        <li class="tab">I will label each x axis, y-axis, include appropriate scales, limits and titles to graphs where appropriate using the python library matplotlib. </li>
+      </ol>
+    </p>
+    <br>
+    <b><center>Flowchart</center></b>
+    <p>This flowchart represents the logic implemented in the program for the single player game mode. Other game modes are based on this same logic.</p>
+    <img src="Flowchart.png" class="center reduce30">
+    <br>
+    <b><center>Modelling and Abstraction</center></b>
+    <p>My artefact will model the game tictactoe. I will recreate the grid of tictactoe where X’s and O’s can be placed using numbers. This model will use abstraction as it only collects information essential to my investigation of my chosen hypotheses. For example, the wins, loses and draws of each game will be logged but it will disregard whether the game was won diagonally, horizontally or vertically as these are unnecessary details. Then, I can predict certain outcomes of the game depending on different factors. For example, what is the probability of a player winning if they start in the corner of the grid. .</p>
+    <p>To apply abstraction to my program, I will use functions to section off parts of code so that each block of code is given a name correlating to what it does eg. print_menu(), check_win(), clear_grid(). This way, I will be able to work more efficiently when building on top of previously written code as I will understand what each unit of code did without having to read each line. Not only will disregarding this unnecessary information allow me to work faster but the functions will make my program more organised and readable and avoid duplication of code. </p>
+    <br>
+    <br>
+    <br>
+    <a href="investigationandplan.html" class="changepageleft previous">&laquo; Previous</a>
+    <a href="implementation.html" class="changepageright next">Next &raquo;</a>
+
+    <script src="script.js"></script>
+  </body>
+</html>

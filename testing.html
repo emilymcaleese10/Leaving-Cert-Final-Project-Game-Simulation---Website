@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class = "nav">
+      <ul class ="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="meetingthebrief.html">Meeting the Brief</a></li>
+        <li><a href="investigationandplan.html">Investigation and Plan</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="implementation.html">Implementation</a></li>
+        <li><a href="testing.html">Testing</a></li>
+        <li><a href="evaluation.html">Evaluation</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="wordcount.html">Word Count</a></li>
+      </ul>
+    </div>
+
+    <h2><center>Testing</center></h2>
+    <hr>
+    <br>
+    <b><center>Extent of Testing</center></b>
+    <p>For the majority of my project, I used functional testing to ensure tasks were performed as expected. As I added features to enhance the basic model eg. scoreboard, I used unit testing to ensure that it functioned as intended. Once the function’s expected outcomes were the same as the actual outcomes, I used integration testing to test whether the function would work with other parts of the program. Then, I used system testing to test how everything worked together. I used acceptance testing to ensure I fulfilled all project requirements and objectives and I used usability testing by showing my artefact to friends to ensure the game was navigable and had a friendly user-interface. </p>
+    <b><center>Problems</center></b>
+    <p>After creating a basic model of the game that only allowed the user and computer make moves, I tested its functioning. When the computer chose a square that had already been filled by the user’s X, it would be overwritten with the computer’s O.  To fix this, I added an if statement into the update_grid() function so that the move would only be made if the chosen square was empty. 
+    </p>
+    <p>The print_menu() function returns the user input from the menu. After placing it in an if-statement for each game mode, the menu printed 3 times. I used unit testing to ensure the problem was not in the function itself. Then, I employed integration testing by running the if-statement with the function. When the problem occured, I knew it involved the if-statement. I learned that functions are run when placed in if statements, something I didn’t know previously. To fix this, I assigned the function to a variable and placed the variable in the same if-statement so it was only run once. 
+    </p>
+    <p>Once I had a working model for each game mode, I tested the user inputs with accepted inputs (5), extreme values (100), boundary values (1,9) and error anticipation (“g”,4.5, -7). My original design used an if-statement to only accept integers between 1 and 9. Using error anticipation testing, the inputs 4.5 and “g” returned an error. 
+    </p>
+    <p><center>Test description: Test to validate user input for making move, should only accept integers (1-9)</center></p>
+    <img src="Test Table.png" class="center reduce30">
+    <p>I changed my input validation design so that if tried converting the input into an integer and got an error, it would now print “Try again” and prompt user for another input. Then all test data passed.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="implementation.html" class="changepageleft previous">&laquo; Previous</a>
+    <a href="evaluation.html" class="changepageright next">Next &raquo;</a>
+
+    <script src="script.js"></script>
+  </body>
+</html>

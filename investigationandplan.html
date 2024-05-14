@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class = "nav">
+      <ul class ="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="meetingthebrief.html">Meeting the Brief</a></li>
+        <li><a href="investigationandplan.html">Investigation and Plan</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="implementation.html">Implementation</a></li>
+        <li><a href="testing.html">Testing</a></li>
+        <li><a href="evaluation.html">Evaluation</a></li>
+        <li><a href="references.html">References</a></li>
+        <li><a href="wordcount.html">Word Count</a></li>
+      </ul>
+    </div>
+
+    <h2><center><b>Investigation and Plan</b></center></h2>
+    <hr>
+    <h3><center><b>Research</b></center></h3>
+    <p>To explore different ideas I would base my project on, I created a brainstorm. After brainstorming, I chose two games that I would investigate further (see brainstorm). For hangman, I would use the Pydictionary library to generate a random word and the user would input letters from the keyboard to play. Eventually, I decided to choose tictactoe because I thought it would be easier to program under the assigned timeframe and I could make a better UI for it. I also thought tictactoe would be more suitable for brief requirements as it is already a two player game.</p>
+    <img src="Brainstorm.png" class="center reduce30">
+    <p>According to a Cornell University blog, the minimax algorithm is a recursive algorithm used to choose the next move in a game involving 2 or more players. A value is associated with each move and the move that would result in the highest value is chosen. This idea was used to program the famous Deep Blue AI, a chess computer developed by IBM in the 1990’s. My initial plan was to use this algorithm to simulate tictactoe. However, using this algorithm would not include the random aspect mentioned in the brief and I didn’t think it was suitable time frame of the project too. To perfect players would also result in 100% draws, allowing for minimal data analysis.</p>
+    <p>In 1959, T. M. Little of the University of California used combinatorial analysis to find various probabilities for the game tictactoe. Assuming player 1 always goes first, his results were as follows:</p>
+    <img src = "Probabilities research.png" class = "center reduce50">
+    <p>After reading multiple research papers explaining the maths behind tictactoe, I became curious as to other probabilities, such as those involving starting positions.</p>
+    <b><center>Description of Project</center></b>
+    <p>I created a simulation of the game tictactoe with python that follows the standard rules of the game. To move, users enter a number from the keypad that correlates with the intended grid position. In the single player game mode, players play against a computer that chooses moves randomly. In multiplayer, players take turns making moves on a 3x3 grid. In the simulation play, the user decides the number of times to run the simulation, the starting player and the starting position of the games. The results will be stored in a csv and then graphed. Using a csv file with previously collected data, graphs will be displayed and used to test various hypotheses. The end-users for my project would be game developers who could use game probabilities of tictactoe to create similar versions of the game or use probabilities to change game difficulty.</p>
+    <br>
+    <b><center>Project Objectives</center></b>
+      <p><u>Functioning of the Game</u></p>
+      <p><ol>
+        <li class="tab">Updates game state correctly (win, lose, draw) for each game mode </li>
+        <li class="tab">Logs and displays correct score (1 win = score:1)</li>
+        <li class="tab">Collects move frequency, win, lose and draw data from simulation play in csv </li>
+      </ol>
+    </p>
+      <p><u>User Interface</u></p>
+    <p><ol>
+        <li class="tab">Clear user interface – user should be able to navigate game easily </li>
+        <li class="tab">Ensure all inputs function and are validated </li>
+        <li class="tab">Display clear easy to read graphs </li>
+      </ol>
+    </p>
+    <br>
+    <p><u>Hypotheses</u></p>
+    <p>Find the probability of winning if:</p>
+    <p><ul>
+      <li class="tab">You make the first move </li>
+      <li class="tab">Your first move is random</li>
+      <li class="tab">The corner square is your first move</li>
+      <li class="tab">The side square is your first move</li>
+      <li class="tab">The middle square is your first move</li>
+    </ul></p>
+    <p>Note: all corner squares etc. have equal opportunities of winning when taking symmetry into account.</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  
+
+    <a href="meetingthebrief.html" class="changepageleft previous">&laquo; Previous</a>
+    <a href="design.html" class="changepageright next">Next &raquo;</a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
